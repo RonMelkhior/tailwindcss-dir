@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-dir",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds direction variants to your Tailwind project",
   "main": "src/index.js",
   "repository": "https://github.com/RonMelkhior/tailwindcss-dir.git",
