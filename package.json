@@ -7,8 +7,17 @@
   "author": "Ron Melkhior <ron3353@gmail.com>",
   "license": "MIT",
   "private": false,
-  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "postcss": "^7.0.5"
+  },
   "dependencies": {
     "tailwindcss": "^0.6.6"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/jest/customMatchers.js"
   }
 }
