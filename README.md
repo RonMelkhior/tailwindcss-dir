@@ -1,9 +1,12 @@
 # Tailwind Direction
 
+<a href="https://www.npmjs.com/package/tailwindcss-dir"><img src="https://img.shields.io/npm/dt/tailwindcss-dir.svg" alt="Total Downloads"></a>
+<a href="https://github.com/RonMelkhior/tailwindcss-dir/releases"><img src="https://img.shields.io/npm/v/tailwindcss-dir.svg" alt="Latest Release"></a>
+
 Tailwind Direction adds a custom `direction` variant to your tailwind project,
 letting you have custom CSS rules for LTR and RTL layouts.
 
-**Note: This package requires Tailwind >= v0.6.2, and is currently using experimental features which might break.**
+**Note: This package requires Tailwind >= v0.7.0.**
 
 # Getting started
 
@@ -15,15 +18,6 @@ yarn add tailwindcss-dir --dev
 
 # NPM
 npm install tailwindcss-dir --save-dev
-```
-
-Then, enable `pluginVariants` in the `experiments` section of your Tailwind config.
-**This is currently required due to variant plugins being in development and prone to changes.**
-
-```js
-experiments: {
-	pluginVariants: true,
-},
 ```
 
 Now, setup the plugin in your Tailwind config's `plugins` section.
