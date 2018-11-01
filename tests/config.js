@@ -4,5 +4,4 @@ const plugin = require('../src/index');
 module.exports = {
 	...defaultConfig,
 	plugins: [plugin()],
-	experiments: { pluginVariants: true },
 };

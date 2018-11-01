@@ -15,7 +15,7 @@
     "postcss": "^7.0.5"
   },
   "dependencies": {
-    "tailwindcss": "^0.6.6"
+    "tailwindcss": "^0.7.0"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/jest/customMatchers.js"
