@@ -1,4 +1,4 @@
-const defaultConfig = require('tailwindcss/defaultConfig.stub');
+const defaultConfig = require('tailwindcss/defaultConfig');
 const plugin = require('../src/index');
 
 module.exports = {
