@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-dir",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Adds direction variants to your Tailwind project",
   "main": "src/index.js",
   "repository": "https://github.com/RonMelkhior/tailwindcss-dir.git",
@@ -15,7 +15,7 @@
     "postcss": "^7.0.5"
   },
   "dependencies": {
-    "tailwindcss": "^0.7.0"
+    "tailwindcss": "^1.0.1"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/jest/customMatchers.js"

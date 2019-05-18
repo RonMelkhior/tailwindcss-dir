@@ -9,14 +9,14 @@ function addSelectors(container, modifierFunction) {
 	return rules;
 }
 
-function generator({ addVariant }) {
+function generator({ addVariant, e }) {
 	addVariant('direction', ({ container, separator }) => {
 		const result = container.clone({ nodes: [] });
 
 		['ltr', 'rtl'].forEach(dir => {
 			result.nodes = result.nodes.concat(
 				addSelectors(container, className => {
-					return `[dir='${dir}'] .${dir}${separator}${className}`;
+					return `[dir='${dir}'] .${dir}${e(separator)}${className}`;
 				})
 			);
 		});
