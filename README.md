@@ -6,7 +6,7 @@
 Tailwind Direction adds a custom `direction` variant to your tailwind project,
 letting you have custom CSS rules for LTR and RTL layouts.
 
-**Note: This package requires Tailwind >= v0.7.0.**
+**Note: This package requires Tailwind >= v1.0.1.**
 
 # Getting started
 
