@@ -32,7 +32,7 @@ plugins: [
 Finally, you can use the plugin and add it to modules you want to use it with.
 
 ```js
-modules: {
+variants: {
 	float: ['responsive', 'direction'],
 	margin: ['responsive', 'direction'],
 	padding: ['responsive', 'direction'],
