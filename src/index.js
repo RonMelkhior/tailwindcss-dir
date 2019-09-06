@@ -16,7 +16,8 @@ function generator({ addVariant, e }) {
 		['ltr', 'rtl'].forEach(dir => {
 			result.nodes = result.nodes.concat(
 				addSelectors(container, className => {
-					return `[dir='${dir}'] .${dir}${e(separator)}${className}`;
+					return [`[dir='${dir}'] .${dir}${e(separator)}${className}`,
+					` [dir='${dir}'].${dir}${e(separator)}${className}`];
 				})
 			);
 		});
