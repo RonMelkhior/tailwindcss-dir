@@ -9,25 +9,23 @@ function addSelectors(container, modifierFunction) {
 	return rules;
 }
 
-function generator({ addVariant, e }) {
-	addVariant('direction', ({ container, separator }) => {
-		const result = container.clone({ nodes: [] });
+module.exports = function({ sameLevel = true } = {}) {
+	return function({ addVariant, e }) {
+		addVariant('direction', ({ container, separator }) => {
+			const result = container.clone({ nodes: [] });
 
-		['ltr', 'rtl'].forEach(dir => {
-			result.nodes = result.nodes.concat(
-				addSelectors(container, className => {
-					return [
-						`[dir='${dir}'] .${dir}${e(separator)}${className}`,
-						`[dir='${dir}'].${dir}${e(separator)}${className}`,
-					];
-				})
-			);
+			['ltr', 'rtl'].forEach(dir => {
+				result.nodes = result.nodes.concat(
+					addSelectors(container, className => {
+						return [
+							`[dir='${dir}'] .${dir}${e(separator)}${className}`,
+							... sameLevel ? [`[dir='${dir}'].${dir}${e(separator)}${className}`] : [],
+						];
+					})
+				);
+			});
+
+			return result;
 		});
-
-		return result;
-	});
-}
-
-module.exports = function() {
-	return generator;
+	}
 };
