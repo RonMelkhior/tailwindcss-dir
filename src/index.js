@@ -16,12 +16,12 @@ module.exports = function({ sameLevel = true } = {}) {
 
 		['ltr', 'rtl'].forEach(dir => {
 			result.nodes = result.nodes.concat(
-			addSelectors(container, className => {
-				return [
-				`[dir='${dir}'] .${dir}${e(separator)}${className}`,
-				... sameLevel ? [`[dir='${dir}'].${dir}${e(separator)}${className}`] : [],
-				];
-			})
+				addSelectors(container, className => {
+					return [
+					`[dir='${dir}'] .${dir}${e(separator)}${className}`,
+					... sameLevel ? [`[dir='${dir}'].${dir}${e(separator)}${className}`] : [],
+					];
+				})
 			);
 		});
 
