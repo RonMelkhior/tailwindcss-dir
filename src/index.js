@@ -18,14 +18,14 @@ module.exports = function({ sameLevel = true } = {}) {
 			result.nodes = result.nodes.concat(
 				addSelectors(container, className => {
 					return [
-					`[dir='${dir}'] .${dir}${e(separator)}${className}`,
-					... sameLevel ? [`[dir='${dir}'].${dir}${e(separator)}${className}`] : [],
+						`[dir='${dir}'] .${dir}${e(separator)}${className}`,
+						... sameLevel ? [`[dir='${dir}'].${dir}${e(separator)}${className}`] : [],
 					];
 				})
 			);
 		});
 
-	  	return result;
+		return result;
 	});
   }
 };
