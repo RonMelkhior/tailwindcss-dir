@@ -16,10 +16,20 @@ function generator({ addVariant, e }) {
 		['ltr', 'rtl'].forEach(dir => {
 			result.nodes = result.nodes.concat(
 				addSelectors(container, className => {
-					return [
-						`[dir='${dir}'] .${dir}${e(separator)}${className}`,
-						`[dir='${dir}'].${dir}${e(separator)}${className}`,
-					];
+					let newSelector = [];
+					if(dir == 'rtl'){
+						newSelector = [
+							`[dir='${dir}'] .${dir}${e(separator)}${className}`,
+							`[dir='${dir}'].${dir}${e(separator)}${className}`,
+						];
+						
+					}else{
+						newSelector = [
+							`${dir}${e(separator)}${className}`,
+						];
+					}
+
+					return newSelector;
 				})
 			);
 		});
