@@ -33,9 +33,9 @@ Finally, you can use the plugin and add it to modules you want to use it with.
 
 ```js
 variants: {
-	float: ['responsive', 'direction'],
-	margin: ['responsive', 'direction'],
-	padding: ['responsive', 'direction'],
+	float: ['responsive', 'direction'], // adds both rtl and ltr variants
+	margin: ['responsive', 'rtl'], // only adds rtl variant
+	padding: ['responsive', 'ltr'], // only adds ltr variant
 },
 ```
 
