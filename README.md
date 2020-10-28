@@ -29,6 +29,15 @@ plugins: [
 ],
 ```
 
+If you're using purgecss, add the following whitelist options to ensure preservation of the tailwind-dir styles rules on production build  :
+```js
+ purge: {
+    options: {
+      whitelist: ["dir", "rtl", "ltr"],
+    },
+  }
+```
+
 Finally, you can use the plugin and add it to modules you want to use it with.
 
 ```js
